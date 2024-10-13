@@ -1,0 +1,8 @@
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    email TEXT NOT NULL,
+    personality_details TEXT,
+    mental_health_details TEXT
+);

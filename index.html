@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health App</title>
+</head>
+<body>
+    <div id="login">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Username">
+        <button onclick="login()">Login</button>
+        <button onclick="signup()">Sign Up</button>
+    </div>
+
+    <div id="home" style="display:none;">
+        <h1>Home</h1>
+        <div id="menu">
+            <button onclick="showOption('Home')">Home</button>
+            <button onclick="showOption('Results')">Results</button>
+            <button onclick="showOption('Chatbot')">Chatbot</button>
+            <button onclick="showOption('Profile')">Profile</button>
+        </div>
+        
+        <div id="bottom-nav">
+            <button onclick="showOption('Home')">Home</button>
+            <button onclick="showOption('Results')">Results</button>
+            <button onclick="showOption('Chatbot')">Chatbot</button>
+            <button onclick="showOption('Profile')">Profile</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function login() {
+            let username = document.getElementById('username').value;
+            eel.login(username);
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('home').style.display = 'block';
+        }
+
+        function signup() {
+            let username = document.getElementById('username').value;
+            eel.signup(username);
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('home').style.display = 'block';
+        }
+
+        function showOption(option) {
+            console.log(`Selected: ${option}`);
+            // You can add functionality to display different content based on the selected option.
+        }
+    </script>
+</body>
+</html>
